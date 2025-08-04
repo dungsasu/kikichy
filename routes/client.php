@@ -36,9 +36,11 @@ Route::post('/check-duplicate', [MemberClient::class, 'checkDuplicate'])->name('
 Route::get('/dang-nhap-doanh-nghiep', [MemberClient::class, 'showLoginBusiness'])->name('client.login_business');
 Route::post('/dang-nhap-doanh-nghiep', [MemberClient::class, 'loginBusiness'])->name('client.login_business.store');
 Route::post('/dang-xuat-doanh-nghiep', [MemberClient::class, 'logout'])->name('client.logout_business');
+Route::get('/doanh-nghiep/logout', [MemberClient::class, 'logout'])->name('client.logout_business_get');
+Route::post('/update-activity', [MemberClient::class, 'updateActivity'])->name('client.update_activity');
 
 // Business Profile Routes (cần đăng nhập)
-Route::middleware('auth:members')->group(function () {
+Route::middleware(['auth:members', 'auto.logout'])->group(function () {
     Route::get('/ho-so-doanh-nghiep', [MemberClient::class, 'showProfile'])->name('client.business.profile');
     Route::post('/ho-so-doanh-nghiep/cap-nhat', [MemberClient::class, 'updateInfo'])->name('client.business.update_info');
     Route::post('/ho-so-doanh-nghiep/cap-nhat-avatar', [MemberClient::class, 'updateAvatar'])->name('client.business.update_avatar');

@@ -9,6 +9,11 @@
 @section('script_page')
     <script src="{{ asset('assets/client/js/business_info.js') }}"></script>
     <script src="{{ asset('assets/client/js/business_order.js') }}"></script>
+    <script>
+        // Set session timeout from Laravel config
+        window.sessionTimeout = {{ config('session.lifetime') * 60 }};
+    </script>
+    <script src="{{ asset('assets/client/js/session-manager.js') }}"></script>
 @endsection
 
 @section('description', 'Quản lý hồ sơ doanh nghiệp')

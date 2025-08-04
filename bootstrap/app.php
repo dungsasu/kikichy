@@ -17,6 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'auth' => \App\Http\Middleware\Authenticate::class,
             'permission' => \App\Http\Middleware\CheckPermission::class,
             'locale' => \App\Http\Middleware\ApplyLocale::class,
+            'auto.logout' => \App\Http\Middleware\AutoLogout::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

@@ -113,7 +113,7 @@
                                                     <label class="form-label">Tên hành trình khách phá (tour, chuyến tham
                                                         quan):</label>
                                                     <input type="text" class="font-light form-control" name="tour_name"
-                                                        placeholder="5 Days Bangkok and Koh Samui" required>
+                                                        placeholder="Vui lòng nhập tên hành trình" required>
                                                 </div>
                                             </div>
 
@@ -121,7 +121,7 @@
                                             <div class="col-md-6 form-group mb-3">
                                                 <label class="form-label">Mã Tour của bạn</label>
                                                 <input type="text" class="font-light form-control" name="tour_code"
-                                                    placeholder="TLBK5D4N" required>
+                                                    placeholder="Vui lòng nhập mã Tour" required>
                                             </div>
 
                                             <!-- Duration -->
@@ -129,7 +129,7 @@
                                                 <label class="form-label">Khoảng thời gian</label>
                                                 <div class="input-group">
                                                     <input type="number" class="font-light form-control" name="duration"
-                                                        placeholder="5" min="1" required>
+                                                        placeholder="Vui lòng nhập khoảng thời gian" min="1" required>
                                                     <span class="input-group-text">Ngày</span>
                                                 </div>
                                             </div>
@@ -167,7 +167,7 @@
                                                 <label class="form-label">Nhóm khách tối thiểu</label>
                                                 <div class="input-group">
                                                     <input type="number" class="font-light form-control"
-                                                        name="min_participants" placeholder="1" min="1" required>
+                                                        name="min_participants" placeholder="Vui lòng nhập số lượng khách tối thiểu" min="1" required>
                                                     <span class="input-group-text">Khách</span>
                                                 </div>
                                             </div>
@@ -175,7 +175,7 @@
                                                 <label class="form-label">Nhóm khách tối đa</label>
                                                 <div class="input-group">
                                                     <input type="number" class="font-light form-control"
-                                                        name="max_participants" placeholder="12" min="1" required>
+                                                        name="max_participants" placeholder="Vui lòng nhập số lượng nhóm khách tối đa" min="1" required>
                                                     <span class="input-group-text">Khách</span>
                                                 </div>
                                             </div>
@@ -188,7 +188,7 @@
                                                 <label class="form-label">Phụ hợp lứa tuổi từ</label>
                                                 <div class="input-group">
                                                     <input type="number" class="font-light form-control"
-                                                        name="departure_from" placeholder="1" min="1" required>
+                                                        name="departure_from" placeholder="Vui lòng nhập độ tuổi tối thiểu" min="1" required>
                                                     <span class="input-group-text">Tuổi</span>
                                                 </div>
                                             </div>
@@ -196,7 +196,7 @@
                                                 <label class="form-label">Phụ hợp lứa tuổi đến</label>
                                                 <div class="input-group">
                                                     <input type="number" class="font-light form-control"
-                                                        name="departure_to" placeholder="99" min="1" required>
+                                                        name="departure_to" placeholder="Vui lòng nhập độ tuổi tối đa" min="1" required>
                                                     <span class="input-group-text">Tuổi</span>
                                                 </div>
                                             </div>

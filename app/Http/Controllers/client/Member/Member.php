@@ -253,12 +253,15 @@ class Member extends Controller
 
         // Tìm member theo email hoặc username
         $member = MemberModel::where('email', $email)
-                            ->orWhere('username', $email)
-                            ->first();
+            ->orWhere('username', $email)
+            ->first();
 
         if ($member && Hash::check($password, $member->password)) {
             // Đăng nhập thành công
             Auth::guard('members')->login($member);
+            
+            // Thiết lập thời gian hoạt động ban đầu
+            session(['lastActivityTime' => time()]);
             
             return redirect()->route('client.business.profile')->with('success', 'Đăng nhập thành công!');
         }
@@ -272,7 +275,12 @@ class Member extends Controller
     public function logout()
     {
         Auth::guard('members')->logout();
-        return redirect()->route('client.home.index')->with('success', 'Đăng xuất thành công!');
+        
+        // Invalidate session to ensure complete logout
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        
+        return redirect()->route('client.home.index')->with('warning', 'Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.');
     }
 
     public function showProfile()
@@ -815,5 +823,17 @@ class Member extends Controller
                 'message' => 'Lỗi server: ' . $e->getMessage()
             ], 500);
         }
+    }
+
+    public function updateActivity(Request $request)
+    {
+        if (!Auth::guard('members')->check()) {
+            return response()->json(['success' => false, 'message' => 'Unauthorized'], 401);
+        }
+
+        // Cập nhật thời gian hoạt động trong session
+        session(['lastActivityTime' => time()]);
+
+        return response()->json(['success' => true]);
     }
 }
