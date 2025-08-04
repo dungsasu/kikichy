@@ -1,0 +1,211 @@
+// Trang điều hành - Business Orders
+.info-section {
+    .company-logo-section {
+        .choose-file-container {
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+
+            &:hover {
+                border-color: #007bff;
+            }
+        }
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+
+        &.fw-bold {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        i.fa-question-circle {
+            margin-left: 5px;
+            opacity: 0.6;
+            cursor: help;
+        }
+    }
+
+    // Custom số input styling
+    input[type="number"] {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px 12px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        font-family: "Opensans-Light";
+
+        &:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            outline: none;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        // Firefox
+        &[type="number"] {
+            -moz-appearance: textfield;
+        }
+    }
+
+    // Custom number input với nút tăng giảm
+    .number-input-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+
+        input[type="number"] {
+            width: 100%;
+            padding-right: 30px;
+        }
+
+        .number-controls {
+            position: absolute;
+            right: 1px;
+            top: 1px;
+            bottom: 1px;
+            width: 25px;
+            display: flex;
+            flex-direction: column;
+
+            button {
+                flex: 1;
+                border: none;
+                background: #f8f9fa;
+                cursor: pointer;
+                font-size: 10px;
+                color: #666;
+                transition: background-color 0.2s;
+
+                &:hover {
+                    background: #e9ecef;
+                    color: #333;
+                }
+
+                &:first-child {
+                    border-top-right-radius: 5px;
+                    border-bottom: 1px solid #ddd;
+                }
+
+                &:last-child {
+                    border-bottom-right-radius: 5px;
+                }
+            }
+        }
+    }
+
+    // Section spacing
+    .age-group-section,
+    .group-size-section,
+    .private-trip-section {
+        background: #fff;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    // Button styling
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        padding: 12px 30px;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+            transform: translateY(-1px);
+        }
+
+        i {
+            margin-right: 8px;
+        }
+    }
+
+    // Editor styling
+    .editor-toolbar {
+        margin-bottom: 10px;
+
+        .btn {
+            margin-right: 5px;
+            padding: 5px 10px;
+            font-size: 12px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+.number-input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.number-input-wrapper input[type="number"] {
+    width: 100%;
+    padding-right: 35px;
+}
+
+.number-controls {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #ddd;
+}
+
+.number-controls button {
+    flex: 1;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-size: 12px;
+    color: #666;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-controls button:hover {
+    background: #e9ecef;
+    color: #333;
+}
+
+.number-controls button:first-child {
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.number-controls button:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.form-label.fw-bold i.fa-question-circle {
+    margin-left: 5px;
+    opacity: 0.6;
+    cursor: help;
+}
+.form-label-big {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+
+  
+}

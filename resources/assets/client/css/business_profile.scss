@@ -1,0 +1,412 @@
+/* Business Profile Styles */
+.business-profile-container {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+}
+
+.layout-relative {
+    min-height: calc(100vh - 300px);
+
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Sidebar Styles */
+.sidebar-menu {
+    height: auto;
+    position: sticky;
+    top: 30px;
+}
+
+.profile-sidebar {
+    border-radius: 8px;
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-avatar i {
+    font-size: 24px;
+    color: #666;
+}
+
+.user-info h6 {
+    margin: 0;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.user-info p {
+    margin: 0;
+    color: #666;
+    font-size: 12px;
+}
+
+/* Navigation Menu */
+.profile-nav {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 5px;
+}
+.nav-item.active{
+    a{
+        padding-left: 16px;
+    }
+}
+
+.nav-link-dashboard {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    color: #666;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-dashboard:hover {
+    background-color: #e40808;
+    color: #fff;
+    text-decoration: none;
+    padding-left: 16px;
+}
+
+/* Hover effect cho SVG icons */
+.nav-item:hover .nav-link-dashboard svg path {
+    stroke: #fff;
+}
+
+.nav-item.active .nav-link-dashboard {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Active state cho SVG icons */
+.nav-item.active .nav-link-dashboard svg path {
+    stroke: #fff;
+}
+
+.nav-link-dashboard i {
+    width: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* Style cho SVG icons trong nav */
+.nav-link-dashboard svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-link-dashboard svg path {
+    transition: stroke 0.3s ease;
+}
+
+.nav-link-dashboard span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Support Section */
+.support-section {
+    padding: 15px 0;
+    border-radius: 8px;
+}
+
+.support-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 0;
+    height: auto;
+    min-height: 500px;
+}
+
+.overview-content {
+    height: auto;
+}
+
+.content-header {
+    margin-bottom: 24px;
+}
+
+.content-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3b3b3b;
+}
+
+/* Form Styles */
+.info-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 14px;
+    display: block;
+}
+
+/* Input Wrapper - Thay thế cho input-group cũ */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-control-custom {
+    border: 1px solid #ddd;
+    padding: 14px 80px 14px 16px; /* Tăng padding bên phải để chứa 2 icons */
+    font-size: 14px;
+    width: 100%;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    font-family: "Opensans-Light";
+}
+.readonly{
+    background-color: #f2f2f2;
+}
+.normal{
+    background-color: #fff;
+}
+
+.form-control-custom:focus {
+    outline: none;
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    background-color: #fff;
+}
+
+.form-control-custom::placeholder {
+    color: #999;
+}
+
+/* Input Icons */
+.input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icon tooltip (question mark) - luôn ở vị trí ngoài cùng bên phải */
+.tooltip-icon,
+.input-icon:not(.password-toggle) {
+    right: 15px;
+}
+
+/* Icon password toggle - ở bên trái icon tooltip */
+.password-toggle {
+    right: 45px;
+}
+
+.password-toggle:hover {
+    color: #333;
+}
+
+/* Loại bỏ các style cũ không dùng */
+.input-group {
+    display: none; /* Ẩn input-group cũ */
+}
+
+.group-control-lg,
+.group-icon {
+    display: none; /* Ẩn các class cũ */
+}
+
+.form-actions {
+    padding-top: 25px;
+    border-top: 1px solid #e9ecef;
+}
+
+.btn-save {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-save:hover {
+    background-color: #c82333;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 0 !important;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-avatar i {
+    font-size: 40px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff !important;
+}
+
+.avatar-upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.user-avatar:hover .avatar-upload-overlay {
+    opacity: 1;
+}
+
+.upload-btn {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.user-avatar-choosefile {
+    max-width: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .business-profile-container {
+        padding: 15px 0;
+        min-height: auto;
+    }
+    
+    .nav-container {
+        padding: 0 10px;
+    }
+    
+    .container-fluid {
+        padding: 0 10px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        margin-top: 20px;
+        min-height: auto;
+    }
+    
+    .sidebar-menu {
+        margin-bottom: 20px;
+        top: 15px;
+        position: relative;
+    }
+    
+    .profile-sidebar {
+        padding: 20px;
+    }
+    
+    .user-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .user-avatar {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .content-header h2 {
+        font-size: 18px;
+    }
+    
+    .form-control-custom {
+        padding: 12px 70px 12px 14px;
+    }
+    
+    .info-section {
+        padding: 20px;
+    }
+}

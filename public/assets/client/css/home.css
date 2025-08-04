@@ -1,0 +1,9 @@
+p {
+  color: black;
+}
+
+.img-fluid {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 0 180px 180px;
+}

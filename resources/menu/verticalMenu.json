@@ -1,0 +1,358 @@
+{
+    "menu": [
+        {
+            "menuHeader": "Chung"
+        },
+        {
+            "url": "/",
+            "name": "Dashboard",
+            "icon": "menu-icon tf-icons mdi mdi-home-outline",
+            "slug": ["admin.users.index", "admin.roles.index"],
+            "submenu": [
+                {
+                    "url": "admin_cms/users",
+                    "name": "Quản trị viên",
+                    "slug": "admin.users.index"
+                },
+                {
+                    "url": "admin_cms/roles",
+                    "name": "Vai trò",
+                    "slug": "admin.roles.index"
+                }
+            ]
+        },
+        {
+            "menuHeader": "Quản lý nội dung"
+        },
+        {
+            "name": "Cấu hình",
+            "icon": "menu-icon tf-icons mdi mdi-cellphone",
+            "slug": ["admin.config.index", "admin.extends.index"],
+            "submenu": [
+                {
+                    "url": "admin_cms/config",
+                    "name": "Danh sách",
+                    "slug": "admin.config.index"
+                }
+            ]
+        },
+        {
+            "name": "Banner",
+            "icon": "menu-icon tf-icons mdi mdi-image-multiple",
+            "slug": [
+                "admin.banner.categories.index",
+                "admin.banner.categories.edit",
+                "admin.banner.categories.create",
+                "admin.banner.index",
+                "admin.banner.edit",
+                "admin.banner.create"
+            ],
+            "submenu": [
+                {
+                    "url": "admin_cms/banner-categories",
+                    "name": "Danh mục",
+                    "slug": "admin.banner.categories.index"
+                },
+                {
+                    "url": "admin_cms/banner",
+                    "name": "Danh sách",
+                    "slug": "admin.banner.index"
+                }
+            ]
+        },
+        {
+            "name": "Danh sách menu",
+            "icon": "menu-icon tf-icons mdi mdi-menu",
+            "slug": ["admin.menu.categories.index", "admin.menu.index"],
+            "submenu": [
+                {
+                    "url": "admin_cms/menu-groups",
+                    "name": "Danh mục",
+                    "slug": "admin.menu.categories.index"
+                },
+                {
+                    "url": "admin_cms/menu-items",
+                    "name": "Danh sách",
+                    "slug": "admin.menu.index"
+                }
+            ]
+        },
+        {
+            "name": "Ngôn ngữ",
+            "icon": "menu-icon tf-icons mdi mdi-alphabetical",
+            "slug": ["admin.translation.index"],
+            "submenu": [
+                {
+                    "url": "admin_cms/translation",
+                    "name": "Danh sách",
+                    "slug": "admin.translation.index"
+                }
+            ]
+        },
+        {
+            "name": "Tour",
+            "icon": "menu-icon tf-icons mdi mdi-hanger",
+            "slug": [
+                "admin.tour.categories.index",
+                "admin.tour.index",
+                "admin.tour.types.index",
+                "admin.tour.types.create",
+                "admin.tour.types.edit",
+                "admin.instructions.index",
+                "admin.instructions.create",
+                "admin.instructions.edit",
+                "admin.experiential_style.index",
+                "admin.experiential_style.create",
+                "admin.experiential_style.edit",
+                "admin.tour.color.index",
+                "admin.tour.size.index",
+                "admin.vouchers.index",
+                "admin.vouchers.edit",
+                "admin.tour-fast.index",
+                "edit_tour"
+            ],
+            "submenu": [
+                {
+                    "url": "admin_cms/tour-categories",
+                    "name": "Danh mục",
+                    "slug": "admin.tour.categories.index"
+                },
+                {
+                    "url": "admin_cms/tour-types",
+                    "name": "Loại Tour",
+                    "slug": "admin.tour.types.index"
+                },
+                {
+                    "url": "admin_cms/instructions",
+                    "name": "Loại hướng dẫn",
+                    "slug": "admin.instructions.index"
+                },
+                {
+                    "url": "admin_cms/experiential_style",
+                    "name": "Phong cách trải nghiệm",
+                    "slug": "admin.experiential_style.index"
+                },
+                {
+                    "url": "admin_cms/tours",
+                    "name": "Danh sách tour",
+                    "slug": "admin.tour.index"
+                },
+                {
+                    "hide": true,
+                    "url": "admin_cms/vouchers",
+                    "name": "Voucher",
+                    "slug": "admin.vouchers.index"
+                }
+            ]
+        },
+
+        {
+            "name": "Bộ lọc/ Bảng TSKT",
+            "icon": "menu-icon tf-icons mdi mdi-filter-menu",
+            "slug": [
+                "admin.filter.group.index",
+                "admin.filter.group.create",
+                "admin.filter.group.edit",
+                "admin.filter.category.index",
+                "admin.filter.category.create",
+                "admin.filter.category.edit",
+                "admin.filter.index",
+                "admin.filter.create",
+                "admin.filter.edit",
+                "admin.filter.table.index",
+                "admin.filter.table.create",
+                "admin.filter.table.edit"
+            ],
+            "submenu": [
+                {
+                    "url": "admin_cms/filter-group",
+                    "name": "Nhóm",
+                    "slug": "admin.filter.group.index"
+                },
+                {
+                    "url": "admin_cms/filter-category",
+                    "name": "Danh mục",
+                    "slug": "admin.filter.category.index"
+                },
+                {
+                    "url": "admin_cms/filter",
+                    "name": "Danh sách",
+                    "slug": "admin.filter.index"
+                },
+                {
+                    "url": "admin_cms/filter-table",
+                    "name": "Bộ lọc/ Bảng TSKT",
+                    "slug": "admin.filter.table.index"
+                }
+            ]
+        },
+        {
+            "name": "Đơn hàng",
+            "icon": "menu-icon tf-icons mdi mdi-cart",
+            "slug": ["admin.order.index"],
+            "submenu": [
+                {
+                    "url": "admin_cms/order",
+                    "name": "Danh sách",
+                    "slug": "admin.order.index"
+                }
+            ]
+        },
+        {
+            "name": "Đánh giá",
+            "icon": "menu-icon tf-icons mdi mdi-comment",
+            "slug": [
+                "admin.comment.tour.index"
+            ],
+            "submenu": [
+                {
+                    "url": "admin_cms/comment/tour",
+                    "name": "Sản phẩm",
+                    "slug": "admin.comment.tour.index"
+                }
+            ]
+        },
+        {
+            "hide": true,
+            "name": "Thành viên",
+            "icon": "menu-icon tf-icons mdi mdi-account-box-outline",
+            "slug": ["admin.member.index", "admin.member.edit"],
+            "submenu": [
+                {
+                    "url": "admin_cms/members",
+                    "name": "Danh sách",
+                    "slug": "admin.member.index"
+                }
+            ]
+        },
+        {
+            "name": "Tin tức",
+            "icon": "menu-icon tf-icons mdi mdi-newspaper",
+            "slug": [
+                "admin.news.categories.index",
+                "admin.news.index",
+                "admin.news.edit"
+            ],
+            "submenu": [
+                {
+                    "url": "admin_cms/news-categories",
+                    "name": "Danh mục",
+                    "slug": "admin.news.categories.index"
+                },
+                {
+                    "url": "admin_cms/news",
+                    "name": "Danh sách",
+                    "slug": "admin.news.index"
+                }
+            ]
+        },
+        {
+            "name": "Điểm đến",
+            "icon": "menu-icon tf-icons mdi mdi-newspaper",
+            "slug": [
+                "admin.destination.categories.index",
+                "admin.destination.index",
+                "admin.destination.edit"
+            ],
+            "submenu": [
+                {
+                    "url": "admin_cms/destination-categories",
+                    "name": "Danh mục",
+                    "slug": "admin.destination.categories.index"
+                },
+                {
+                    "url": "admin_cms/destination",
+                    "name": "Danh sách điểm đến",
+                    "slug": "admin.destination.index"
+                }
+            ]
+        },
+        {
+            "name": "Quốc gia",
+            "icon": "menu-icon tf-icons mdi mdi-newspaper",
+            "slug": [
+                "admin.country.index",
+                "admin.country.index",
+                "admin.country.edit"
+            ],
+            "submenu": [
+                {
+                    "url": "admin_cms/country",
+                    "name": "Danh sách quốc gia",
+                    "slug": "admin.country.index"
+                },
+                {
+                    "url": "admin_cms/city",
+                    "name": "Danh sách thành phố",
+                    "slug": "admin.city.index"
+                }
+            ]
+        },
+        {
+            "name": "Ưu đãi",
+            "icon": "menu-icon tf-icons mdi mdi-newspaper",
+            "slug": [
+                "admin.endow.categories.index",
+                "admin.endow.index",
+                "admin.endow.edit"
+            ],
+            "submenu": [
+                {
+                    "url": "admin_cms/endow-categories",
+                    "name": "Danh mục",
+                    "slug": "admin.endow.categories.index"
+                },
+                {
+                    "url": "admin_cms/endow",
+                    "name": "Danh sách ưu đãi",
+                    "slug": "admin.endow.index"
+                }
+            ]
+        },
+        {
+            "name": "Tuyển dụng",
+            "icon": "menu-icon tf-icons mdi mdi-file-document-plus-outline",
+            "slug": [
+                "admin.recruitment.index",
+                "admin.recruitment.edit",
+                "admin.recruitment.create"
+            ],
+            "submenu": [
+                {
+                    "url": "admin_cms/recruitment",
+                    "name": "Danh sách",
+                    "slug": "admin.recruitment.index"
+                }
+            ]
+        },
+        {
+            "name": "Trang tĩnh",
+            "icon": "menu-icon tf-icons mdi mdi-book-open-page-variant",
+            "slug": ["admin.contents.categories.index", "admin.contents.index"],
+            "submenu": [
+                {
+                    "url": "admin_cms/contents-categories",
+                    "name": "Danh mục",
+                    "slug": "admin.contents.categories.index"
+                },
+                {
+                    "url": "admin_cms/contents",
+                    "name": "Danh sách",
+                    "slug": "admin.contents.index"
+                }
+            ]
+        },
+        {
+            "name": "Liên hệ",
+            "icon": "menu-icon tf-icons mdi mdi-human-greeting-proximity",
+            "slug": ["admin.contact.index"],
+            "submenu": [
+                {
+                    "url": "admin_cms/contact",
+                    "name": "Danh sách",
+                    "slug": "admin.contact.index"
+                }
+            ]
+        }
+    ]
+}

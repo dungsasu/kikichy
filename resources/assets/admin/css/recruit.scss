@@ -1,0 +1,466 @@
+.all_recruit_page {
+    padding-top: 24px;
+    display: flex;
+    gap: 48px;
+    .side_bar_recruit {
+        width: 20%;
+        .title_side_bar {
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: left;
+            padding-bottom: 24px;
+            border-bottom: 1px rgb(0, 0, 0) solid;
+        }
+
+        .list_filter {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 24px 0;
+
+            .filter_item {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 15px;
+                text-align: left;
+                padding: 12px 16px;
+                display: flex;
+                justify-content: space-between;
+                &.search {
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid rgba(222, 222, 222, 1);
+                    gap: 12px;
+                    input[type="text"] {
+                        width: 80%;
+                        border: none;
+                        outline: none;
+                    }
+                    img {
+                    }
+                }
+
+                &.btn_search {
+                    background-color: rgb(0, 0, 0);
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 14px;
+                    color: #fff;
+                    padding: 16px;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            select {
+                border: none;
+
+                background-color: rgba(245, 245, 245, 1);
+            }
+        }
+    }
+
+    .content_recruit_side {
+        width: 80%;
+        .title_page {
+            text-transform: uppercase;
+            width: 100%;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: left;
+            padding-bottom: 24px;
+            border-bottom: 1px rgb(0, 0, 0) solid;
+        }
+
+        .list_jobs {
+            .jobs_item {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                text-decoration: none;
+                color: inherit;
+                padding: 24px 0;
+                border-bottom: 1px solid rgba(222, 222, 222, 1);
+                .jobs_title {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 23.68px;
+                    text-align: left;
+                }
+
+                .jobs_brief_desc_row {
+                    display: flex;
+                    justify-content: space-between;
+                    .left_infor_jobs_desc {
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 25.2px;
+                        text-align: left;
+                        color: rgba(117, 117, 117, 1);
+                    }
+
+                    .right_infor_jobs_desc {
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 25.2px;
+                        text-align: right;
+                        color: rgba(117, 117, 117, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.all_recruit_detail {
+    display: flex;
+    gap: 48px;
+    .box_left_detail {
+        width: 25%;
+        height: fit-content;
+        position: sticky;
+        top: 80px;
+        border: 1px solid rgba(222, 222, 222, 1);
+        box-shadow: 16px 16px 16px 0px rgba(0, 0, 0, 0.04);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .job_title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 18px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        .job_explanation {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 21px;
+            color: rgba(117, 117, 117, 1);
+        }
+
+        .experience_required {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 21px;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .contact_to_apply {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 21px;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .break_line {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(222, 222, 222, 1);
+        }
+
+        .rowinfor_job_detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .item_infor {
+                .label_item_infor {
+                    font-size: 15px;
+                    font-weight: 300;
+                    line-height: 21px;
+                }
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .content_recruit_side {
+        width: 75%;
+        .content_edited_wrapper {
+            p {
+            }
+            ul {
+                li {
+                    // Styles for list items in content edited wrapper
+                }
+            }
+        }
+
+        .form-container {
+            border-top: 1px rgba(222, 222, 222, 1) solid;
+            padding: 40px 0 48px 0;
+            margin-top: 40px;
+
+            .form-title {
+                margin-bottom: 40px;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 18px;
+                text-transform: uppercase;
+            }
+            .all_form {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 16px;
+                .form-group {
+                    border: 1px solid rgba(222, 222, 222, 1);
+                    font-size: 15px;
+                    font-weight: 300;
+                    line-height: 15px;
+                    text-align: left;
+                    box-sizing: border-box;
+                    input {
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        padding: 16px;
+                    }
+
+                    textarea {
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        padding: 16px;
+                        height: 160px;
+                    }
+                    &.full_width_form_input {
+                        grid-column: 1 / 4;
+                        textarea {
+                        }
+                    }
+                    &.form-file {
+                        grid-column: 1 / 4;
+                        border: none;
+
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .upload_file {
+                            display: flex;
+                            gap: 16px;
+                            align-items: center;
+
+                            .text_upload {
+                                margin-bottom: 0;
+                                font-size: 14px;
+                                font-weight: 700;
+                                line-height: 14px;
+                                text-align: left;
+                                span {
+                                    color: red;
+                                }
+                            }
+                            .input_file_to_apply {
+                                input[type="file"] {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 16.41px;
+                                    text-align: left;
+                                    padding: 0;
+                                    margin-bottom: 10px;
+                                }
+                                p {
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    line-height: 14.06px;
+                                    text-align: left;
+                                    color: rgba(117, 117, 117, 1);
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                        .form-submit {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 14px;
+                            text-align: left;
+                            background-color: #000;
+                            color: #fff;
+                            padding: 16px 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .all_recruit_page {
+        flex-direction: column;
+
+        .side_bar_recruit {
+            width: 100%;
+            .title_side_bar {
+            }
+
+            .list_filter {
+                .filter_item {
+                    &.search {
+                        input[type="text"] {
+                        }
+
+                        img {
+                        }
+                    }
+
+                    &.btn_search {
+                    }
+                }
+
+                select {
+                }
+            }
+        }
+
+        .content_recruit_side {
+            width: 100%;
+            .title_page {
+            }
+
+            .list_jobs {
+                .jobs_item {
+                    gap: 12px;
+                    .jobs_title {
+                    }
+
+                    .jobs_brief_desc_row {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .left_infor_jobs_desc {
+                        }
+
+                        .right_infor_jobs_desc {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .all_recruit_detail {
+        display: flex;
+        flex-direction: column;
+
+        .box_left_detail {
+            position: relative;
+            width: 100%;
+            top: 0;
+            .job_title {
+            }
+
+            .job_explanation {
+                // Styles for job explanation
+            }
+
+            .experience_required {
+                span {
+                    // Styles for experience span
+                }
+            }
+
+            .contact_to_apply {
+                span {
+                    // Styles for contact span
+                }
+            }
+
+            .break_line {
+                // Styles for break line
+            }
+
+            .rowinfor_job_detail {
+                .item_infor {
+                    .label_item_infor {
+                        // Styles for label item information
+                    }
+                    span {
+                        // Styles for item span
+                    }
+                }
+            }
+        }
+
+        .content_recruit_side {
+            width: 100%;
+
+            .content_edited_wrapper {
+                p {
+                    // Styles for paragraph in content edited wrapper
+                }
+                ul {
+                    li {
+                        // Styles for list items in content edited wrapper
+                    }
+                }
+            }
+
+            .form-container {
+                .form-title {
+                    // Styles for form title
+                }
+                .all_form {
+                    grid-template-columns: 1fr;
+                    .form-group {
+                        grid-column: 1;
+                        input {
+                        }
+                        textarea {
+                            // Styles for form inputs and textarea
+                        }
+                        &.full_width_form_input {
+                            grid-column: 1 / 2;
+                            textarea {
+                                // Styles for full width textarea
+                            }
+                        }
+                        &.form-file {
+                            display: block;
+                            grid-column: 1;
+                            .upload_file {
+                                .text_upload {
+                                    width: 50%;
+                                    span {
+                                        // Styles for upload text span
+                                    }
+                                }
+                                .input_file_to_apply {
+                                    input[type="file"] {
+                                        // Styles for file input
+                                    }
+                                    p {
+                                        // Styles for file format support text
+                                    }
+                                }
+                            }
+                            .form-submit {
+                                align-items: center;
+                                display: flex;
+                                width: 100%;
+                                justify-content: center;
+                                font-size: 18px;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,223 @@
+.left {
+  max-height: 900px;
+  position: sticky;
+  top: 0;
+  min-width: 60%;
+  max-width: 60%;
+  display: flex;
+  overflow: hidden;
+}
+.left .nav-carousel {
+  margin-right: 12px;
+}
+.left .nav-carousel ul {
+  list-style: none;
+  padding: 0px;
+}
+.left .nav-carousel ul li {
+  margin-bottom: 12px;
+  width: 64px;
+  height: 80px;
+  box-sizing: border-box;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.left .nav-carousel ul li:hover {
+  border: 1px solid #000;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+.left .nav-carousel img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.left .main-carousel .item-main img {
+  width: 100%;
+}
+.left .nav-item.active {
+  border: 1px solid #000;
+  opacity: 1;
+}
+
+.right {
+  min-width: 4%;
+  max-width: 40%;
+}
+
+.product-slide-wrap {
+  gap: 24px;
+}
+
+.des-title {
+  font-size: 16px;
+  color: #757575;
+  font-weight: 300;
+}
+
+.bst {
+  font-weight: 300;
+}
+
+.title-product {
+  font-size: 24px;
+}
+
+.color-item-outside {
+  opacity: 0.3;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.color-item-outside .color-item-inside {
+  width: 28px;
+  height: 28px;
+  border-radius: 15px;
+}
+
+.color-item-outside.active {
+  opacity: 1;
+}
+
+.size-item {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+
+.size-item.active {
+  border: 2px solid #333;
+}
+
+.size-item.sold-out {
+  opacity: 0.3;
+}
+
+.change-quantity {
+  position: relative;
+  width: 100px;
+}
+
+.subtract,
+.plus {
+  border: none;
+  height: 48px;
+  background-color: transparent;
+  position: absolute;
+}
+
+.subtract {
+  left: 5px;
+  z-index: 10;
+}
+
+.plus {
+  right: 5px;
+  z-index: 10;
+}
+
+.number-only {
+  position: relative;
+  height: 48px;
+  width: 100px;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn-add-to-cart {
+  width: 100%;
+  height: 48px;
+  background-color: #000;
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.thong-tin-gioi-thieu svg {
+  min-width: 28px;
+}
+
+.dac-diem-noi-bat ul li {
+  padding: 5px;
+  font-weight: 300;
+}
+
+.product-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
+  overflow: hidden;
+  color: var(--Alias-Primary---On-Theme, #27272a);
+  text-overflow: ellipsis;
+  font-weight: 400;
+  line-height: 150%;
+  margin-top: 10px;
+  word-break: break-word;
+}
+
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.nav-link {
+  border: none !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  color: #757575;
+  position: relative;
+}
+
+.nav-link.active {
+  color: black;
+  font-weight: 500;
+}
+.nav-link.active::after {
+  content: "";
+  display: block;
+  width: 15%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tab-pane {
+  min-height: 400px;
+}
+.tab-pane p {
+  font-weight: 300;
+}
+
+.comments .jq-star {
+  width: 40px !important;
+  height: 40px !important;
+}
+.comments .left-comment {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5;
+  padding: 25px;
+}
+.comments svg {
+  min-width: 40px;
+  min-height: 40px;
+}/*# sourceMappingURL=products.css.map */

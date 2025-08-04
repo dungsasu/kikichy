@@ -1,0 +1,6 @@
+@font-face {
+    font-family: Monaco;
+    src: url('assets/fonts/Monaco/Monaco.woff2') format('woff2'), /* Modern Browsers */
+         url('assets/fonts/Monaco/Monaco.woff') format('woff'); /* Older Browsers */
+    font-display: swap; /* Enhances text visibility while fonts are loading */
+}

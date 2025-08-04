@@ -1,0 +1,1 @@
+function clearCart(){$.ajax({url:"/clear-cart",method:"GET",data:{_token:$('meta[name="csrf-token"]').attr("content")},success:function(r){},error:function(r,t,a){console.log("Error clearing cart:",a)}})}$(document).ready(function(){clearCart()});

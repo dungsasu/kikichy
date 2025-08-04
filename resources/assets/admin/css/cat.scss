@@ -1,0 +1,166 @@
+.products-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.collapse-category-button {
+    margin-top: 15px;
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapse-category-button[aria-expanded="true"] {
+    .arrow {
+        svg {
+            transform: rotate(180deg);
+            width: 30px;
+        }
+    }
+}
+
+.collapse-categories {
+    padding-left: 0px;
+    list-style: none;
+    margin-top: 10px;
+
+    li {
+        padding: 8px;
+    }
+}
+
+.arrow {
+    svg {
+        transform: rotate(360deg);
+        width: 30px;
+        transition: 0.3s;
+    }
+}
+.section_below_title_for_mobile {
+    display: none;
+}
+.btn_buy_now_mobile {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .products-wrap {
+        grid-template-columns: 1fr 1fr;
+    }
+    .all_content_prd_cate {
+        .flex_section {
+            .is_mobile {
+                display: none;
+            }
+        }
+    }
+    .main_content_prd {
+        margin-top: 32px;
+        .title {
+            text-align: center;
+            padding: 8px 0 32px 0;
+        }
+    }
+    .section_below_title_for_mobile {
+        display: block;
+        .prd_cate_list {
+            text-wrap: nowrap;
+            margin-bottom: 0;
+            padding: 0 0 16px 0;
+            list-style: none;
+            display: flex;
+            gap: 12px;
+            overflow-x: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .prd_cate_item {
+                display: block;
+                width: fit-content;
+                height: fit-content;
+
+                a {
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 12px;
+                    text-align: center;
+                    display: block;
+                    background-color: rgba(245, 245, 245, 1);
+                }
+            }
+        }
+        .filter_btn_odering_select_row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-top: 1px solid rgba(235, 235, 235, 1);
+            .btn_popup_fiter {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                p {
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 16px;
+                }
+                img {
+                }
+            }
+            .odering_select {
+                border: 1px solid rgba(222, 222, 222, 1);
+                width: 40%;
+                select {
+                    border: none;
+                    width: 100%;
+                    padding: 10px;
+                    option {
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 15px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+    .btn_buy_now_mobile {
+        display: block;
+        text-align: center;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.06);
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 12px 0;
+    }
+
+    .product-item {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+
+        .thumbnail-image {
+        }
+        .product-info {
+            .product-name {
+                margin-top: 0;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            .color {
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+.all_contact_block {
+    .inner_contact_content_block {
+        width: 100%;
+        display: flex;
+        gap: 48px;
+        .contact_department_side {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 35%;
+            p {
+                margin-bottom: 0;
+            }
+            .contact_department_card {
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                border: 1px solid rgba(0, 0, 0, 1);
+                box-shadow: 16px 16px 16px 0px rgba(0, 0, 0, 0.04);
+
+                .icon_card_name_row {
+                    display: flex;
+                    gap: 16px;
+                    align-items: center;
+                    .icon_card {
+                        img {
+                            width: 40px;
+                            height: auto;
+                        }
+                    }
+
+                    .card_name {
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 33.6px;
+                        text-align: left;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .telephone_email {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    margin-left: calc(15% + 15px);
+                    .p_contact_row {
+                        font-size: 16px;
+                        line-height: 16px;
+                        text-align: left;
+                        display: grid;
+                        grid-template-columns: 1fr 2fr;
+                        p:first-child {
+                            color: rgba(117, 117, 117, 1);
+                            font-weight: 300;
+                        }
+                        p:last-child {
+                            color: #000;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact_form {
+            width: 65%;
+            .title_form {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 24px;
+                text-align: left;
+                text-transform: uppercase;
+                padding-bottom: 24px;
+            }
+
+            .form_contact {
+                padding-top: 40px;
+                border-top: 1px solid rgba(0, 0, 0, 1);
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                .group_input {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 16px;
+                    .input_item {
+                        width: 100%;
+                        border-radius: 2px;
+                        padding: 16px;
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 15px;
+                        text-align: left;
+                        background-color: rgba(245, 245, 245, 1);
+                        border: none;
+                        outline: none;
+                    }
+                    .full_width_input {
+                        grid-column: 1 / -1;
+                    }
+                    .content_contact {
+                        height: 120px;
+                    }
+                    #content {
+                        line-height: 150%;
+                        min-height: 150px;
+                    }
+                }
+                .row_btn_submit {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    button {
+                        padding: 16px 24px 16px 24px;
+                        border-radius: 2px;
+                        background-color: #000;
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 14px;
+                        text-align: center;
+                        border: none;
+                        outline: none;
+                        width: calc(100% / 6);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 768px) {
+    .all_contact_block {
+        .inner_contact_content_block {
+            flex-direction: column;
+            .contact_department_side {
+                width: 100% !important;
+            }
+            .contact_form {
+                width: 100% !important;
+                .form_contact {
+                    .group_input {
+                        grid-template-columns: 1fr !important;
+                    }
+                    .row_btn_submit {
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

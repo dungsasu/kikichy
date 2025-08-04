@@ -1,0 +1,405 @@
+.product-slide-wrap {
+    .left {
+        // max-height: 900px;
+        position: sticky;
+        top: 72px;
+        min-width: 60%;
+        max-width: 60%;
+        display: flex;
+        overflow: hidden;
+        .nav-carousel {
+            margin-right: 12px;
+            ul {
+                list-style: none;
+                padding: 0px;
+                li {
+                    margin-bottom: 12px;
+                    width: 64px;
+                    height: 80px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    opacity: 0.7;
+                    &:hover {
+                        border: 1px solid #000;
+                        transition: 0.3s;
+                        opacity: 0.7;
+                    }
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .main-carousel {
+            .item-main {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .nav-item.active {
+            border: 1px solid #000;
+            opacity: 1;
+        }
+    }
+    .right {
+        min-width: 40%;
+        max-width: 40%;
+    }
+}
+
+.product-slide-wrap {
+    gap: 24px;
+}
+
+.des-title {
+    font-size: 16px;
+    color: #757575;
+    font-weight: 300;
+}
+
+.bst {
+    font-weight: 300;
+}
+.title-product {
+    font-size: 24px;
+}
+
+.owl-center {
+    .owl-carousel {
+        display: flex !important; /* To override display:block I added !important */
+        flex-direction: row;
+        justify-content: center; /* To center the carousel */
+    }
+}
+
+.color-item-outside {
+    opacity: 0.3;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .color-item-inside {
+        width: 28px;
+        height: 28px;
+        border-radius: 15px;
+    }
+}
+
+.color-item-outside.active {
+    opacity: 1;
+}
+
+.size-item {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+.size-item.active {
+    border: 2px solid #333;
+}
+.size-item.sold-out {
+    opacity: 0.3;
+}
+.change-quantity {
+    position: relative;
+    width: 100%;
+}
+.subtract,
+.plus {
+    border: none;
+    height: 48px;
+    background-color: transparent;
+    position: absolute;
+}
+.subtract {
+    left: 5px;
+    z-index: 10;
+}
+.plus {
+    right: 5px;
+    z-index: 10;
+}
+.number-only {
+    position: relative;
+    height: 48px;
+    width: 100%;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    height: 48px;
+    background-color: #000;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-add-to-cart-out-of-stock {
+    width: 100%;
+    height: 48px;
+    background-color: #b5b5b5;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.thong-tin-gioi-thieu {
+    svg {
+        min-width: 28px;
+    }
+}
+.dac-diem-noi-bat {
+    ul {
+        li {
+            padding: 5px;
+            font-weight: 300;
+        }
+    }
+}
+
+.product-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    align-self: stretch;
+    overflow: hidden;
+    color: var(--Alias-Primary---On-Theme, #27272a);
+    text-overflow: ellipsis;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 10px;
+    word-break: break-word;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.nav-link {
+    border: none !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    color: #757575;
+    position: relative;
+}
+.nav-link.active {
+    color: black;
+    font-weight: 500;
+    &::after {
+        content: "";
+        display: block;
+        width: 15%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.tab-pane {
+    min-height: 400px;
+    p {
+        font-weight: 300;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.comments {
+    .jq-star {
+        width: 40px !important;
+        height: 40px !important;
+        // margin-right: 20px !important;
+    }
+    .left-comment {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5;
+        padding: 25px;
+    }
+    svg {
+        min-width: 40px;
+        min-height: 40px;
+    }
+}
+
+.main-carousel-wrap {
+    width: calc(100% - 76px);
+}
+
+// SALE PRODUCTS
+.all_sale_page_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .top_of_page_sale {
+        // Styles for the top section of the sale page
+
+        .row_title_header_page {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            justify-content: center;
+            .bolder_title {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 28.8px;
+                text-transform: uppercase;
+                letter-spacing: 0.04em;
+            }
+
+            .normal_title {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28.8px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+
+            .row_time_remaining {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                img {
+                    // Styles for the clock image
+                }
+
+                .time_remaining_text {
+                    color: rgba(117, 117, 117, 1);
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    font-weight: 300;
+                    line-height: 15px;
+                }
+            }
+
+            .time_countdown {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                .time_item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    padding: 8px;
+                    background-color: #000;
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 12px;
+                    text-align: center;
+                }
+                .hours {
+                    // Styles for the hours
+                }
+
+                .minutes {
+                    // Styles for the minutes
+                }
+
+                .secs {
+                    // Styles for the seconds
+                }
+            }
+        }
+    }
+
+    .banner_sale {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .list_btn_tab_sale_type {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        .item_tab {
+            border-radius: 2px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #000;
+            background-color: rgba(245, 245, 245, 1);
+            padding: 19px 60px;
+        }
+        .active {
+            color: rgba(255, 255, 255, 1);
+            background-color: #000;
+        }
+    }
+
+    .list_prd_sale {
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-carousel-wrap {
+        width: calc(100%);
+    }
+    .custom_nav_info_prd_detail {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        white-space: nowrap;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .nav-link {
+            min-width: unset;
+        }
+    }
+    .product-slide-wrap {
+        .left {
+            position: relative;
+            top: 0px;
+            min-width: 100%;
+            max-width: 100%;
+            .nav-carousel {
+                display: none;
+            }
+        }
+        .right {
+            max-width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    .nav-tabs {
+    }
+}

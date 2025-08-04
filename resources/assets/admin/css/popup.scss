@@ -1,0 +1,156 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup-container {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        transform: scale(0.8);
+        transition: transform 0.3s ease;
+
+        .popup-overlay.show & {
+            transform: scale(1);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background: white;
+                transform: scale(1.1);
+            }
+        }
+
+        .popup-image {
+            img {
+                width: 100%;
+                height: auto;
+                max-height: 70vh;
+                object-fit: contain;
+                display: block;
+            }
+        }
+
+        .popup-footer {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+
+            .popup-checkbox-label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-size: 14px;
+                color: #333;
+                user-select: none;
+
+                .popup-checkbox {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+
+                    &:checked ~ .checkmark {
+                        background-color: #007bff;
+                        border-color: #007bff;
+
+                        &:after {
+                            display: block;
+                        }
+                    }
+                }
+
+                .checkmark {
+                    position: relative;
+                    height: 18px;
+                    width: 18px;
+                    background-color: #fff;
+                    border: 2px solid #ddd;
+                    border-radius: 3px;
+                    margin-right: 10px;
+                    transition: all 0.2s ease;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                        left: 5px;
+                        top: 2px;
+                        width: 4px;
+                        height: 8px;
+                        border: solid white;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(45deg);
+                    }
+                }
+
+                &:hover .checkmark {
+                    border-color: #007bff;
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .popup-overlay {
+        .popup-container {
+            max-width: 95%;
+            margin: 20px;
+
+            .popup-close {
+                top: 5px;
+                right: 10px;
+                width: 25px;
+                height: 25px;
+                font-size: 16px;
+            }
+
+            .popup-footer {
+                padding: 12px 15px;
+
+                .popup-checkbox-label {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

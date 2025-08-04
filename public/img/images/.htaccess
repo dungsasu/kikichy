@@ -1,0 +1,5 @@
+RewriteEngine Off
+<Files ~ "^.*\.(php|phP|pHp|pHP|Php|PhP|PHp|PHP|cgi|cgI|cGi|cGI|Cgi|CgI|CGi|CGI|pl|pL|Pl|PL|phtml|phtmL|phtMl|phtML|phTml|phTmL|phTMl|phTML|pHtml|pHtmL|pHtMl|pHtML|pHTml|pHTmL|pHTMl|pHTML|Phtml|PhtmL|PhtMl|PhtML|PhTml|PhTmL|PhTMl|PhTML|PHtml|PHtmL|PHtMl|PHtML|PHTml|PHTmL|PHTMl|PHTML|shtml|shtmL|shtMl|shtML|shTml|shTmL|shTMl|shTML|sHtml|sHtmL|sHtMl|sHtML|sHTml|sHTmL|sHTMl|sHTML|Shtml|ShtmL|ShtMl|ShtML|ShTml|ShTmL|ShTMl|ShTML|SHtml|SHtmL|SHtMl|SHtML|SHTml|SHTmL|SHTMl|SHTML|cfn)">
+Deny from all
+</Files>
+ErrorDocument 404 /404.html

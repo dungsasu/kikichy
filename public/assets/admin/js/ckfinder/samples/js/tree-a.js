@@ -1,0 +1,1 @@
+"use strict";!function(){for(var t=SF.getByClass("tree-a"),e=t.length;e--;){var a=t[e];SF.attachListener(a,"click",function(t){var e=t.target||t.srcElement;"H2"!==e.nodeName||SF.classList.contains(e,"tree-a-no-sub")||SF.classList.toggle(e,"tree-a-active")})}}();

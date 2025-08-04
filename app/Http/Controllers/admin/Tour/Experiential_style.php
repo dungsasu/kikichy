@@ -1,0 +1,75 @@
+<?php
+
+namespace App\Http\Controllers\admin\Tour;
+
+use App\Http\Controllers\BaseController;
+use Illuminate\Http\Request;
+use App\Models\admin\Tour\Experiential_style as Experiential_styleModel;
+
+class Experiential_style extends BaseController
+{
+    public function __construct()
+    {
+        $this->model = Experiential_styleModel::class;
+        $this->view = 'admin.experiential_style';
+        $this->prefix = 'experiential_style';
+        $this->sizes_resize = [
+            'thumb' => [800, 400],
+        ];
+    }
+
+    public function index()
+    {
+        // Gọi parent index method và lấy view response
+        $response = parent::index();
+        
+        // Nếu là view response, ghi đè show_button_action
+        if ($response instanceof \Illuminate\View\View) {
+            $data = $response->getData();
+            $data['show_button_action'] = true;
+            $response->with($data);
+        }
+        
+        return $response;
+    }
+
+    public function create()
+    {
+        return parent::create();
+    }
+
+    public function edit($id)
+    {
+        return parent::edit($id);
+    }
+
+    public function save(Request $request)
+    {
+        parent::setData([
+            'id' => $request->id,
+            'ordering' => $request->ordering,
+            'name' => $request->name,
+            'published' => $request->published,
+            'alias' => $request->alias,
+        ]);
+
+        return parent::save($request);
+    }
+
+    protected function setRedirect()
+    {
+        return ['admin.experiential_style.create', 'admin.experiential_style.edit', 'admin.experiential_style.index'];
+    }
+
+    protected function setRules()
+    {
+        return [
+            'name' => 'required|string|max:255',
+        ];
+    }
+
+    public function deleteRecords(Request $request)
+    {
+        return parent::delete($request);
+    }
+}

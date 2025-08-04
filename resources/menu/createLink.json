@@ -1,0 +1,125 @@
+{
+    "links": [
+        {
+            "name": "Tour",
+            "children": [
+                {
+                    "name": "Mặc định",
+                    "type": "default",
+                    "route": "client.product.new"
+                },
+                {
+                    "name": "Danh mục",
+                    "type": "category",
+                    "model": "App\\Models\\admin\\product\\ProductCategories",
+                    "route": "client.product-categories"
+                },
+                {
+                    "name": "Danh sách",
+                    "type": "",
+                    "model": "App\\Models\\admin\\product\\Product",
+                    "model_category": "App\\Models\\admin\\product\\ProductCategories",
+                    "route": "client.product"
+                }
+            ]
+        },
+        {
+            "name": "Trang tĩnh",
+            "children": [
+                {
+                    "name": "Danh mục",
+                    "type": "category",
+                    "model": "App\\Models\\admin\\Content\\ContentCategories",
+                    "route": "client.contents-categories"
+                },
+                {
+                    "name": "Danh sách",
+                    "type": "",
+                    "model": "App\\Models\\admin\\Content\\Content",
+                    "model_category": "App\\Models\\admin\\Content\\ContentCategories",
+                    "route": "client.contents-detail"
+                }
+            ]
+        },
+        {
+            "name": "Tin tức",
+            "children": [
+                {
+                    "name": "Mặc định",
+                    "type": "default",
+                    "route": "client.news"
+                },
+                {
+                    "name": "Danh mục",
+                    "type": "category",
+                    "model": "App\\Models\\admin\\News\\NewsCategories",
+                    "route": "client.news-categories"
+                },
+                {
+                    "name": "Danh sách",
+                    "type": "",
+                    "model": "App\\Models\\admin\\News\\News",
+                    "model_category": "App\\Models\\admin\\News\\NewsCategories",
+                    "route": "client.news-detail"
+                }
+            ]
+        },
+        {
+            "name": "Bộ sưu tập",
+            "children": [
+                {
+                    "name": "Mặc định",
+                    "type": "default",
+                    "route": "client.collection.home"
+                },
+                {
+                    "name": "Danh sách",
+                    "type": "category",
+                    "model": "App\\Models\\admin\\Collection\\Collection",
+                    "model_category": "",
+                    "route": "client.collection"
+                }
+            ]
+        },
+        {
+            "name": "Trình diễn thời trang",
+            "children": [
+                {
+                    "name": "Mặc định",
+                    "type": "default",
+                    "route": "client.fashion-shows"
+                }
+            ]
+        },
+        {
+            "name": "Hệ thống cửa hàng",
+            "children": [
+                {
+                    "name": "Mặc định",
+                    "type": "default",
+                    "route": "client.shops"
+                }
+            ]
+        },
+        {
+            "name": "Tuyển dụng",
+            "children": [
+                {
+                    "name": "Mặc định",
+                    "type": "default",
+                    "route": "client.recruiment"
+                }
+            ]
+        },
+        {
+            "name": "Liên hệ",
+            "children": [
+                {
+                    "name": "Mặc định",
+                    "type": "default",
+                    "route": "client.contact"
+                }
+            ]
+        }
+    ]
+}

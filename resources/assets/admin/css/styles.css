@@ -1,0 +1,49 @@
+@charset "UTF-8";
+* {
+  font-family: Sofia Pro;
+  font-size: 16px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+header {
+  height: 72px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.my-container {
+  max-width: 1920px;
+  width: calc(100% - 48px); /* 100% chiều rộng trừ đi 24px mỗi bên */
+  margin: auto; /* Cách lề trái và phải 24px */
+}
+
+.main-menu {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 0px;
+}
+.main-menu li {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.main-menu li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+}/*# sourceMappingURL=styles.css.map */
